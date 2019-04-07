@@ -145,8 +145,27 @@ li {
 .delivery table {
     border: 2em solid #ffdc8d;
     margin: 3em;
-    padding: 4em;
-    padding-top: 2em;
+    margin-top: 1em;
+    padding: 2em 4em;
+    padding-top: 1em;
+    border-spacing: 0px;
+    box-shadow: 10px 10px #ddd1, -10px -15px #eee1;
+    transition: box-shadow 0.4s;
+}
+
+.delivery table:hover {
+    box-shadow: 70px 30px #ddd, -70px -45px #eee;
+    transition: box-shadow 0.9s;
+}
+
+.delivery table tr {
+    background-color: none;
+    transition: background-color 0.8s;
+}
+
+.delivery table tr:hover {
+    background-color: #eee;    
+    transition: background-color 0.3s;
 }
 
 .gallery {
