@@ -112,7 +112,7 @@ main {
 }
 
 li {
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
 }
 
 .info {
@@ -120,6 +120,16 @@ li {
     padding-top: 0.5em;
     /* opacity: 0.85; */
     transition: transform 0.6s, box-shadow 0.6s;
+}
+
+.info .accent {
+    font-size: 0.7em;
+    color: #ec5113;
+    font-weight: 800;
+}
+
+.info .block {
+    display: block;
 }
 
 .info:hover, 
