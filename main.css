@@ -246,6 +246,14 @@ footer #map {
     .top h1 {
         grid-column: 1/5;
     }
+
+    .gallery img {
+        width: 100vw;
+    }
+
+    main table {
+        font-size: 0.8em;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -272,6 +280,16 @@ footer #map {
         grid-row: auto;
         grid-column: 1 / 3;
     }
+
+    main table {
+        font-size: 0.6em;
+    }
+
+    footer .contacts {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -291,6 +309,10 @@ footer #map {
 
     .main-header .contacts p {
         margin: 0;
+    }
+
+    main table {
+        font-size: 0.4em;
     }
 
 }
