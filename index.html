@@ -8,7 +8,8 @@
     <meta name="keywords" content="купить бетон в евпатории цена с доставкой, бетон, доставка по западному крыму, раствор, щебень, песок, ПГС, ФБС">
     <meta name="description" content="Бетоны и растворы всех марок в Евпатории и Западном Крыму. Также предлагаем песок, щебень, аренду техники, весы, услуги строительной лаборатории">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">    
+    <link rel="stylesheet" href="main.css">   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
 
 
 
@@ -30,7 +31,31 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/53308222" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
+    <script>
+        //load data from google sheets
+        //delievery    
+        // $.ajax({
+        //     // url: "http://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/2/od6/public/values?alt=json",
+        //     url: "http://cors.io/?https://spreadsheets.google.com/feeds/cells/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/1/public/full?alt=json",
+        //     crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
+        //     dataType: "jsonp", 
+        //     success: function(data){
+        //         console.log(data)
+        //     }
+        // });
 
+        //concrete prices
+        $.ajax({
+            url: "http://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/od6/public/values?alt=json",
+            crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
+            dataType: "jsonp", 
+            success: function(data){
+                console.log(data.feed.entry)
+            }
+        });
+
+
+    </script>
 
     
 </head>
