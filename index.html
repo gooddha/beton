@@ -9,7 +9,7 @@
     <meta name="description" content="Бетоны и растворы всех марок в Евпатории и Западном Крыму. Также предлагаем песок, щебень, аренду техники, весы, услуги строительной лаборатории">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,800&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="main.css">   
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  -->
 
 
 
@@ -32,24 +32,42 @@
     <!-- /Yandex.Metrika counter -->
 
     <script>
-       
-        function loadData(url) {
-            $.ajax({
-                url: url,
-                crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
-                dataType: "jsonp", 
-                success: function(data){
-                    console.log(data.feed.entry)
-                }
-            });
-        }
+       //load data from google spreadSheets https://docs.google.com/spreadsheets/d/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/edit#gid=963079212
 
-        var pagesCount = 3
 
-        for (var i = 1; i <= pagesCount; i++) {
-            let url = "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/" + i + "/public/full?alt=json";
-            loadData(url);
-        }
+       var sheets = [];
+
+
+        function loadData(url) { 
+            // $.ajax({
+            //     url: url,
+            //     crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
+            //     dataType: "jsonp", 
+            //     success: function(data){
+            //         console.log(data.feed.entry)
+            //     }
+            // });       
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url);
+            xhr.send();
+
+            xhr.onload = function(e) {
+                if (xhr.status != 200) {
+                    console.log( xhr.status + ': ' + xhr.statusText ); 
+                } else {
+                    sheets = JSON.parse(xhr.responseText);
+                }                
+            }
+
+        };        
+
+        
+        loadData('data.json');
+        // for (var i = 1; i <= pagesCount; i++) {
+        //     let url = "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/" + i + "/public/full?alt=json";
+        //     loadData(url);
+        // }
 
     </script>
 
@@ -130,7 +148,7 @@
 
             
             <div class="delivery">
-                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQY9qtVz061W-4586grib92B2aPz3N2NXrZuzk17e0_9Ow7DIqe8D59xn9_6CA3eWeNFxS3uRFqa6yV/pubhtml?widget=true&amp;headers=false"></iframe>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQY9qtVz061W-4586grib92B2aPz3N2NXrZuzk17e0_9Ow7DIqe8D59xn9_6CA3eWeNFxS3uRFqa6yV/pubhtml?widget=true&amp;headers=false"></iframe>
                 <table cellpadding="2px">
                     <caption><h3>Стоимость доставки, руб.</h3></caption>
                     <thead>
