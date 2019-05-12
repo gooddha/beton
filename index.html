@@ -2,13 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ООО Горизонт-ЮГЗ - Бетон в Евпатории и Западном Крыму</title>
-    <meta name="keywords" content="бетон, купить, в крыму, раствор, щебень, песок, ПГС, ФБС, весы, доставка по крыму, весы, лаборатория">
+    <title>Бетон с доставкой по Евпатории и Западному Крыму | Горизонт-ЮГЗ</title>
+    <meta name="keywords" content="купить бетон в евпатории цена с доставкой, бетон, доставка по западному крыму, раствор, щебень, песок, ПГС, ФБС">
     <meta name="description" content="Бетоны и растворы всех марок в Евпатории и Западном Крыму. Также предлагаем песок, щебень, аренду техники, весы, услуги строительной лаборатории">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,800&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">    
+    <link rel="stylesheet" href="main.css">   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+
+
+
+
+    <meta name="yandex-verification" content="1cad12afd156cdbf" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(53308222, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/53308222" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <script>
+       
+        function loadData(url) {
+            $.ajax({
+                url: url,
+                crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
+                dataType: "jsonp", 
+                success: function(data){
+                    console.log(data.feed.entry)
+                }
+            });
+        }
+
+        var pagesCount = 3
+
+        for (var i = 1; i <= pagesCount; i++) {
+            let url = "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/" + i + "/public/full?alt=json";
+            loadData(url);
+        }
+
+    </script>
+
+    
 </head>
 <body>
     <div class="wrapper">
@@ -27,14 +72,16 @@
                     
                 </div>
 
-                <h1>Бетоны и растворы всех марок в&nbsp;Евпатории и&nbsp;Западном Крыму</h1>
+                <h1>Бетон с&nbsp;доставкой по&nbsp;Евпатории и&nbsp;Западному Крыму</h1>
 
-                <p class="description">ООО "Горизонт-ЮГЗ" это база строительных материалов, имеющая в своем распоряжении бетонный завод, большой парк техники, весы, строительную лабораторию. Работаем по наличному и безналичному расчету. Полное документальное сопровождение.</p>
+                <p class="description">
+                    Горизонт-ЮГЗ это база строительных материалов, имеющая в своем распоряжении
+                    бетонный завод, большой парк техники, строительную лабораторию и весы. 
+                    <br>Работаем по&nbsp;наличному и&nbsp;безналичному расчету. <br>Полное документальное сопровождение.
+                </p>
                 
 
             </div>
-
-
                     
         </header>
 
@@ -43,37 +90,41 @@
             <div class="info products">
                 <h3>Наша продукция</h3>
                 <ul>
-                    <li>Бетоны всех марок</li>
-                    <li>Растворы всех марок</li>
-                    <li>Щебень</li>
-                    <li>Песок</li>
+                    <li>Бетон всех марок: <span class="accent block">М100, М150, М200, М250, М300, М350, М400</span></li>
+                    <li>Раствор всех марок: <span class="accent block">М50, М100, М150, М200</span></li>
+                    <li>Щебень: <span class="accent block">белогорский, мраморный, диоритовый</span></li>
+                    <li>Песок: 
+                        <span class="accent block">морской, морской сеянный, мелкозернистый</span></li>
                     <li>Песчано-гравийная смесь</li>
-                    <li>Фундаментный блок стеновой</li>
+                    <li>Фундаментный блок стеновой: <span class="accent block">
+                        400&nbsp;х&nbsp;600&nbsp;х&nbsp;2400, 400&nbsp;х&nbsp;600&nbsp;х&nbsp;1200, 400&nbsp;х&nbsp;600&nbsp;х&nbsp;800
+                    </span></li>
                 </ul>
             </div>
 
             <div class="info services">
                 <h3>Наши услуги</h3>
                 <ul>
-                    <li>Доставка строительных материалов по Крыму</li>
-                    <li>Взвешивание авто</li>
-                    <li>Аренда самосвалов и строительной техники</li>
+                    <li>Изготовление и <span class="accent"> доставка бетона</span>, раствора, песка, щебня <span class="accent"> по Крыму</span></li>
+                    <li><span class="accent"> Аренда</span> самосвалов, миксеров и <span class="accent"> строительной техники</span></li>
+                    <li>Взвешивание авто</li>                    
                     <li>Услуги строительной лаборатории</li>
+                    <li>Ремонт и обслуживание грузовиков и самосвалов</li>
                 </ul>
             </div>
 
             <div class="info technical-abilities">
                 <h3>Техническая база</h3>
                 <ul>
-                    <li>Бетонный завод СБ-241Б,<br> производительность - 40&nbsp;м<sup>3</sup>/ч</li>
-                    <li>Строительная лаборатория (действующие российские документы)</li>
+                    <li>Бетонный завод СБ-241Б,<br> производительность — <span class="accent">40&nbsp;м<sup>3</sup>/ч</span></li>
+                    <li>Строительная лаборатория</li>
+                    <li>Склад цемента<br> вместимость — <span class="accent">150 тонн</span></li>
+                    <li>Склад инертных материалов<br> вместимость — <span class="accent">3000&nbsp;тонн</span></li>
+                    <li>6 автобетоносмесителей<br> объём — <span class="accent">12, 9, 7 и 6&nbsp;м<sup>3</sup></span></li>
+                    <li>6 самосвалов<br> грузоподъёмность — <span class="accent">35, 25, 20 и 5&nbsp;тонн</span></li>
+                    <li>2 цементовоза-полуприцепа<br> грузоподъёмность — <span class="accent">30 и 22&nbsp;тонны</span></li>
+                    <li>2 погрузчика фронтальных<br> грузоподъёмность — <span class="accent">3&nbsp;тонны</span></li>                                
                     <li>Поосные автовесы</li>
-                    <li>Склад цемента на 150 тонн</li>
-                    <li>Склад инертных материалов на 3000&nbsp;тонн</li>
-                    <li>6 автобетоносмесителей объемом 12, 9, 7 и 6&nbsp;м<sup>3</sup></li>
-                    <li>6 самосвалов грузоподъёмностью 35, 25, 20 и 5&nbsp;тонн</li>
-                    <li>2 цементовоза-полуприцепа грузоподъёмностью 30 и 22&nbsp;тонны</li>
-                    <li>2 погрузчика фронтальных грузоподъёмностью 3&nbsp;тонны</li>                                
                 </ul>
             </div>
 
