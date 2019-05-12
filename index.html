@@ -32,38 +32,24 @@
     <!-- /Yandex.Metrika counter -->
 
     <script>
-        //load data from google sheets
-        //delievery    
-        $.ajax({
-            // url: "http://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/2/od6/public/values?alt=json",
-            url: "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/1/public/full?alt=json",
-            crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
-            dataType: "jsonp", 
-            success: function(data){
-                console.log(data.feed.entry)
-            }
-        });
+       
+        function loadData(url) {
+            $.ajax({
+                url: url,
+                crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
+                dataType: "jsonp", 
+                success: function(data){
+                    console.log(data.feed.entry)
+                }
+            });
+        }
 
-        //concrete prices
-        $.ajax({
-            url: "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/2/public/full?alt=json",
-            crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
-            dataType: "jsonp", 
-            success: function(data){
-                console.log(data.feed.entry)
-            }
-        });
+        var pagesCount = 3
 
-        //sand prices
-        $.ajax({
-            url: "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/3/public/full?alt=json",
-            crossDomain: true, // это решает проблему с отсутствием Access-Control-Allow-Origin
-            dataType: "jsonp", 
-            success: function(data){
-                console.log(data.feed.entry)
-            }
-        });
-
+        for (var i = 1; i <= pagesCount; i++) {
+            let url = "https://cors.io/?https://spreadsheets.google.com/feeds/list/1RzghmsGINR73hYRTwM8fnNR1VxbXrXyckPkQYcVIXAo/" + i + "/public/full?alt=json";
+            loadData(url);
+        }
 
     </script>
 
