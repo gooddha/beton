@@ -225,8 +225,7 @@ li {
 }
 
 .gallery img {
-    width: 50%;
-    height: 100%;
+    width: 50%;    
     transition: transform 0.6s, box-shadow 0.6s;
 }
 
